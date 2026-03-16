@@ -6,6 +6,7 @@ import EventDetailPage from '@/features/events/pages/EventDetailPage'
 import TicketRegistrationPage from '@/features/tickets/pages/TicketRegistrationPage'
 import CheckoutPage from '@/features/tickets/pages/CheckoutPage'
 import MyTicketsPage from '@/features/tickets/pages/MyTicketsPage'
+import ProfilePage from '@/features/profile/pages/ProfilePage'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/tickets/register/:eventId" element={<TicketRegistrationPage />} />
       <Route path="/tickets/checkout/:eventId" element={<CheckoutPage />} />
       <Route path="/tickets/my-tickets" element={<MyTicketsPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
     </Routes>
   )
 }
