@@ -3,6 +3,9 @@ import LoginPage from '@/features/auth/pages/LoginPage'
 import RegisterPage from '@/features/auth/pages/RegisterPage'
 import EventsPage from '@/features/events/pages/EventsPage'
 import EventDetailPage from '@/features/events/pages/EventDetailPage'
+import TicketRegistrationPage from '@/features/tickets/pages/TicketRegistrationPage'
+import CheckoutPage from '@/features/tickets/pages/CheckoutPage'
+import MyTicketsPage from '@/features/tickets/pages/MyTicketsPage'
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Route path="/auth/register" element={<RegisterPage />} />
       <Route path="/events" element={<EventsPage />} />
       <Route path="/events/:id" element={<EventDetailPage />} />
+      <Route path="/tickets/register/:eventId" element={<TicketRegistrationPage />} />
+      <Route path="/tickets/checkout/:eventId" element={<CheckoutPage />} />
+      <Route path="/tickets/my-tickets" element={<MyTicketsPage />} />
     </Routes>
   )
 }
