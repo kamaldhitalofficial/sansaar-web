@@ -9,6 +9,8 @@ import MyTicketsPage from '@/features/tickets/pages/MyTicketsPage'
 import ProfilePage from '@/features/profile/pages/ProfilePage'
 import CommunityPage from '@/features/community/pages/CommunityPage'
 import NotificationsPage from '@/features/community/pages/NotificationsPage'
+import VolunteeringPage from '@/features/volunteering/pages/VolunteeringPage'
+import MyVolunteeringPage from '@/features/volunteering/pages/MyVolunteeringPage'
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <Route path="/profile" element={<ProfilePage />} />
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/notifications" element={<NotificationsPage />} />
+      <Route path="/volunteering" element={<VolunteeringPage />} />
+      <Route path="/volunteering/my-applications" element={<MyVolunteeringPage />} />
     </Routes>
   )
 }
