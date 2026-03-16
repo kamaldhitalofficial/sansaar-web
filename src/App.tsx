@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import LoginPage from '@/features/auth/pages/LoginPage'
 import RegisterPage from '@/features/auth/pages/RegisterPage'
 import EventsPage from '@/features/events/pages/EventsPage'
@@ -7,13 +7,11 @@ import TicketRegistrationPage from '@/features/tickets/pages/TicketRegistrationP
 import CheckoutPage from '@/features/tickets/pages/CheckoutPage'
 import MyTicketsPage from '@/features/tickets/pages/MyTicketsPage'
 import ProfilePage from '@/features/profile/pages/ProfilePage'
-import DashboardPage from '@/features/dashboard/pages/DashboardPage'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/dashboard" replace />} />
-      <Route path="/dashboard" element={<DashboardPage />} />
+      <Route path="/" element={<div className="p-8 text-center">Sansaar Web — coming soon</div>} />
       <Route path="/auth/login" element={<LoginPage />} />
       <Route path="/auth/register" element={<RegisterPage />} />
       <Route path="/events" element={<EventsPage />} />
