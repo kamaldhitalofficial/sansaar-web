@@ -4,7 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 const { Title, Text } = Typography
 
 interface RegisterFormValues {
-  fullName: string
+  firstName: string
+  lastName: string
   email: string
   password: string
   confirmPassword: string
@@ -36,13 +37,24 @@ export default function RegisterPage() {
             onFinish={onFinish}
             requiredMark={false}
           >
-            <Form.Item
-              name="fullName"
-              label="Full name"
-              rules={[{ required: true, message: 'Please enter your full name' }]}
-            >
-              <Input placeholder="Alex Johnson" size="large" />
-            </Form.Item>
+            <div className="flex gap-3">
+              <Form.Item
+                name="firstName"
+                label="First name"
+                className="flex-1"
+                rules={[{ required: true, message: 'Required' }]}
+              >
+                <Input placeholder="Alex" size="large" />
+              </Form.Item>
+              <Form.Item
+                name="lastName"
+                label="Last name"
+                className="flex-1"
+                rules={[{ required: true, message: 'Required' }]}
+              >
+                <Input placeholder="Johnson" size="large" />
+              </Form.Item>
+            </div>
 
             <Form.Item
               name="email"
